@@ -1,4 +1,5 @@
-const MORSE_TABLE = {
+module.exports = function decode(expr) {
+    const MORSE_TABLE = {
     '.-':     'a',
     '-...':   'b',
     '-.-.':   'c',
@@ -36,8 +37,6 @@ const MORSE_TABLE = {
     '----.':  '9',
     '-----':  '0',
 };
-
-function decode(expr) {
     let count10 = 0
     let countSlice = 0
     let arr = []
@@ -55,8 +54,4 @@ function decode(expr) {
     })
 
     return result.join('')
-}
-
-module.exports = {
-    decode
 }
